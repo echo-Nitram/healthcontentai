@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HealthContentAI
 
-## Getting Started
+## Generador de FAQs Médicas con Inteligencia Artificial
 
-First, run the development server:
+HealthContentAI utiliza IA avanzada para generar respuestas precisas a preguntas médicas frecuentes en español.
 
+### Características:
+- 🤖 **Respuestas generadas por IA** en múltiples especialidades médicas
+- 💾 **Base de datos automática** de FAQs
+- 🎯 **Especialidades disponibles**: Cardiología, Neurología, Pediatría, Ginecología, Oncología y Medicina General
+- ⚠️ **Disclaimers médicos automáticos** en cada respuesta
+- 📱 **Diseño responsivo** para todos los dispositivos
+
+### Vista en vivo:
+[HealthContentAI](https://echo-Nitram.github.io/healthcontentai)
+
+### Tech Stack:
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- Firebase/Firestore
+- OpenAI API
+- Google AdSense
+
+### Instalación local:
 ```bash
+git clone https://github.com/echo-Nitram/healthcontentai.git
+cd healthcontentai
+npm install
+cp .env.local.example .env.local
+# Configurar variables de entorno
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Variables de entorno necesarias:
+```
+OPENAI_API_KEY=tu-api-key
+NEXT_PUBLIC_FIREBASE_API_KEY=tu-api-key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=tu-dominio
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=tu-proyecto
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=tu-bucket
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=tu-sender-id
+NEXT_PUBLIC_FIREBASE_APP_ID=tu-app-id
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Próximas mejoras:
+- [ ] Agregar más especialidades médicas
+- [ ] Implementar caché de respuestas
+- [ ] Integrar WhatsApp/SMS
+- [ ] Crear panel de administración
+- [ ] Añadir soporte multiidioma
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Licencia:
+MIT License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Contacto:
+Para consultas o colaboraciones: healthcontentai@ejemplo.com

@@ -11,7 +11,11 @@
     "deploy": "npm run export && gh-pages -d out"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.2",
+    "@heroicons/react": "^2.2.0",
+    "firebase": "^11.6.1",
     "next": "15.3.1",
+    "openai": "^4.97.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

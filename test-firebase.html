@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Firebase</title>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js';
+        import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBi-qpDQlEglOTfyq4NeYo_XgruHzc98BU",
+            authDomain: "healthcontentai-dev.firebaseapp.com",
+            projectId: "healthcontentai-dev",
+            storageBucket: "healthcontentai-dev.firebasestorage.app",
+            messagingSenderId: "30812321558",
+            appId: "1:30812321558:web:7c3970307299d28d880237"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        document.getElementById('test').onclick = async () => {
+            try {
+                const docRef = await addDoc(collection(db, 'test'), {
+                    message: 'Firebase funciona!',
+                    timestamp: new Date()
+                });
+                console.log('✅ Firebase funciona! Doc ID:', docRef.id);
+                alert('¡Firebase funciona!');
+            } catch (error) {
+                console.error('❌ Error:', error);
+                alert('Error: ' + error.message);
+            }
+        };
+    </script>
+</head>
+<body>
+    <button id="test">Test Firebase</button>
+</body>
+</html>
